@@ -8,12 +8,16 @@ function custom_listing_template( $listing_template ) {
     $listing_template = '<li data-store-id="<%= id %>">' . "\r\n";
     $listing_template .= "\t" . '<div class="wpsl-store-location">' . "\r\n";
     $listing_template .= "\t\t" . '<p><%= typeof thumb !== "undefined" ? thumb : "" %>' . "\r\n";
-    $listing_template .= "\t\t\t" . $sections->store_header( 'listing' ) . "\r\n"; // Linked or plain store name
+
+    // Linked or plain store name
+    $listing_template .= "\t\t\t" . $sections->store_header( 'listing' ) . "\r\n"; 
     $listing_template .= "\t\t\t" . '<span class="wpsl-street"><%= address %></span>' . "\r\n";
     $listing_template .= "\t\t\t" . '<% if ( address2 ) { %>' . "\r\n";
     $listing_template .= "\t\t\t" . '<span class="wpsl-street"><%= address2 %></span>' . "\r\n";
     $listing_template .= "\t\t\t" . '<% } %>' . "\r\n";
-    $listing_template .= "\t\t\t" . '<span>' . $sections->format_address() . '</span>' . "\r\n"; // Address format from the settings page
+
+    // Address format from the settings page
+    $listing_template .= "\t\t\t" . '<span>' . $sections->format_address() . '</span>' . "\r\n";
 
     if ( ! $settings->get( 'ux', 'hide_country' ) ) {
         $listing_template .= "\t\t\t" . '<span class="wpsl-country"><%= country %></span>' . "\r\n";
@@ -31,7 +35,8 @@ function custom_listing_template( $listing_template ) {
         $listing_template .= $sections->contact_details();
     }
 
-    $listing_template .= "\t\t" . $sections->more_info_template() . "\r\n"; // The "More info" link and content
+    // The "More info" link and content
+    $listing_template .= "\t\t" . $sections->more_info_template() . "\r\n"; 
     $listing_template .= "\t" . '</div>' . "\r\n";
     $listing_template .= "\t" . '<div class="wpsl-direction-wrap">' . "\r\n";
 
