@@ -1,0 +1,9 @@
+#wpsl-result-list,
+.wpsl-skip-to-results {
+    display: none !important;
+}
+
+#wpsl-map {
+    width: 100% !important;
+    float: none !important;
+}
