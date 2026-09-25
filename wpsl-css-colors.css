@@ -1,0 +1,11 @@
+#wpsl-search-input,
+#wpsl-wrap #wpsl-stores li {
+    color: #000 !important;
+    background: #fff !important;
+}
+
+#wpsl-wrap #wpsl-search-wrap label,
+#wpsl-wrap #wpsl-stores li *,
+#wpsl-map .wpsl-info-window {
+    color: #000 !important;
+}
