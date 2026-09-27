@@ -15,12 +15,16 @@ function custom_cpt_info_window_template() {
 
     // The store name and address.
     $cpt_info_window_template .= "\t" . '<p class="wpsl-no-margin">' . "\r\n";
-    $cpt_info_window_template .= "\t\t" . $sections->store_header( 'wpsl_map' ) . "\r\n"; // Linked or plain store name
+
+    // Linked or plain store name
+    $cpt_info_window_template .= "\t\t" . $sections->store_header( 'wpsl_map' ) . "\r\n"; 
     $cpt_info_window_template .= "\t\t" . '<span><%= address %></span>' . "\r\n";
     $cpt_info_window_template .= "\t\t" . '<% if ( address2 ) { %>' . "\r\n";
     $cpt_info_window_template .= "\t\t" . '<span><%= address2 %></span>' . "\r\n";
     $cpt_info_window_template .= "\t\t" . '<% } %>' . "\r\n";
-    $cpt_info_window_template .= "\t\t" . '<span>' . $sections->format_address() . '</span>' . "\r\n"; // Address format from the settings page
+
+    // Address format from the settings page
+    $cpt_info_window_template .= "\t\t" . '<span>' . $sections->format_address() . '</span>' . "\r\n"; 
 
     if ( ! $settings->get( 'ux', 'hide_country' ) ) {
         $cpt_info_window_template .= "\t\t" . '<span class="wpsl-country"><%= country %></span>' . "\r\n";
