@@ -13,11 +13,12 @@ function custom_cpt_info_window_template() {
 
     $cpt_info_window_template = '<div class="wpsl-info-window">' . "\r\n";
 
-    // The store name and address.
+    /**
+     * The store name, linked to the store page or 
+     * store URL when one is available, and the address.
+     */
     $cpt_info_window_template .= "\t" . '<p class="wpsl-no-margin">' . "\r\n";
-
-    // Linked or plain store name
-    $cpt_info_window_template .= "\t\t" . $sections->store_header( 'wpsl_map' ) . "\r\n"; 
+    $cpt_info_window_template .= "\t\t" . $sections->store_header( 'wpsl_map' ) . "\r\n";
     $cpt_info_window_template .= "\t\t" . '<span><%= address %></span>' . "\r\n";
     $cpt_info_window_template .= "\t\t" . '<% if ( address2 ) { %>' . "\r\n";
     $cpt_info_window_template .= "\t\t" . '<span><%= address2 %></span>' . "\r\n";
