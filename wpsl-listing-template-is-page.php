@@ -1,12 +1,12 @@
-add_filter( 'wpsl_listing_template', 'custom_listing_template' );
+add_filter( 'wpsl_listing_template', 'custom_page_listing_template' );
 
-function custom_listing_template() {
+function custom_page_listing_template( $listing_template ) {
 
-    global $wpsl, $wpsl_settings;
-    
+    // Change the template on 'your-page' only.
     if ( is_page( 'your-page' ) ) {
-        // The template code for 'your-page' goes here 
-    }  else {
-        // The template code for all other pages goes here
+        $listing_template = str_replace( '<li data-store-id="<%= id %>">', '<li class="wpsl-my-page" data-store-id="<%= id %>">', $listing_template );
     }
+
+    // All other pages keep the default template.
+    return $listing_template;
 }
