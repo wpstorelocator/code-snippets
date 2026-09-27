@@ -9,7 +9,8 @@ function custom_store_header_template( $header_template, $location ) {
     $sections = wpsl_get_service( 'template_sections' );
     $settings = wpsl_get_service( 'wpsl_settings' );
 
-    $new_window = $sections->new_window(); // Opens the link in a new window if that's enabled on the settings page
+    // Opens the link in a new window if that's enabled on the settings page
+    $new_window = $sections->new_window(); 
 
     if ( $settings->get( 'local_pages', 'permalinks' ) ) {
 
