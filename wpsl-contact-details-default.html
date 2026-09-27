@@ -1,0 +1,25 @@
+<!-- Icons off -->
+<p class="wpsl-contact-details">
+    <% if ( typeof phone !== "undefined" && phone ) { %>
+    <span><strong>{{wpsl_label( 'phone_label' )}}</strong>: <%= formatPhoneNumber( phone ) %></span>
+    <% } %>
+    <% if ( typeof fax !== "undefined" && fax ) { %>
+    <span><strong>{{wpsl_label( 'fax_label' )}}</strong>: <%= formatPhoneNumber( fax ) %></span>
+    <% } %>
+    <% if ( typeof email !== "undefined" && email ) { %>
+    <span><strong>{{wpsl_label( 'email_label' )}}</strong>: <%= formatEmail( email ) %></span>
+    <% } %>
+</p>
+
+<!-- Icons on -->
+<p class="wpsl-contact-details">
+    <% if ( typeof phone !== "undefined" && phone ) { %>
+    <span class="wpsl-icon-phone"><%= formatPhoneNumber( phone ) %></span>
+    <% } %>
+    <% if ( typeof fax !== "undefined" && fax ) { %>
+    <span class="wpsl-icon-fax"><%= formatPhoneNumber( fax ) %></span>
+    <% } %>
+    <% if ( typeof email !== "undefined" && email ) { %>
+    <span class="wpsl-icon-email"><%= formatEmail( email ) %></span>
+    <% } %>
+</p>
