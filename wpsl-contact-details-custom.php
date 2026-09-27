@@ -32,22 +32,23 @@ $rows = [
     ],
 ];
 
-$contact_details = '<p class="wpsl-contact-details">' . "\r\n";
+// Not $contact_details: the v3 templates use that name for the contact details setting.
+$contact_block = '<p class="wpsl-contact-details">' . "\r\n";
 
 foreach ( $rows as $row ) {
     $field = $row['field'];
     $value = '<%= ' . $row['format'] . '( ' . $field . ' ) %>';
 
-    $contact_details .= '<% if ( typeof ' . $field . ' !== "undefined" && ' . $field . ' ) { %>' . "\r\n";
+    $contact_block .= '<% if ( typeof ' . $field . ' !== "undefined" && ' . $field . ' ) { %>' . "\r\n";
 
     // With icons enabled the icon replaces the label, like the plugin's own block.
     if ( $icons_enabled ) {
-        $contact_details .= '<span class="' . esc_attr( $row['icon'] ) . '">' . $value . '</span>' . "\r\n";
+        $contact_block .= '<span class="' . esc_attr( $row['icon'] ) . '">' . $value . '</span>' . "\r\n";
     } else {
-        $contact_details .= '<span><strong>' . $row['label'] . '</strong>: ' . $value . '</span>' . "\r\n";
+        $contact_block .= '<span><strong>' . $row['label'] . '</strong>: ' . $value . '</span>' . "\r\n";
     }
 
-    $contact_details .= '<% } %>' . "\r\n";
+    $contact_block .= '<% } %>' . "\r\n";
 }
 
-$contact_details .= '</p>' . "\r\n";
+$contact_block .= '</p>' . "\r\n";
