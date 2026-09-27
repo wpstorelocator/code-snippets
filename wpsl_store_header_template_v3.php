@@ -44,7 +44,7 @@ function custom_store_header_template( $header_template, $location ) {
      * In the marker popup of the [wpsl_map] shortcode ( 'wpsl_map' location ), no custom
      * fields are included. Add them with the wpsl_cpt_info_window_meta_fields filter.
      */
-    $header_template .= "\r\n" . '<% if ( typeof my_textinput !== "undefined" && my_textinput ) { %>' . "\r\n";
+    $header_template .= '<% if ( typeof my_textinput !== "undefined" && my_textinput ) { %>' . "\r\n";
     $header_template .= '<span class="wpsl-store-subtitle" style="display: block;"><%= my_textinput %></span>' . "\r\n";    
     $header_template .= '<% } %>';
 
