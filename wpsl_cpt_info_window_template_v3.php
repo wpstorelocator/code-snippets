@@ -44,12 +44,18 @@ function custom_cpt_info_window_template() {
     $cpt_info_window_template .= "\t" . '<p><%= my_textinput %></p>' . "\r\n";
     $cpt_info_window_template .= "\t" . '<% } %>' . "\r\n";
 
-    // The phone, fax and email, if "In the marker popup on the landing page" is selected for the contact details.
+    /**
+     * The phone, fax and email, if "In the marker popup on
+     * the landing page" is selected for the contact details.
+     */    
     if ( in_array( 'landing_page_marker_popup', $contact_details, true ) ) {
         $cpt_info_window_template .= $sections->contact_details();
     }
 
-    // The short open / closed status, if it's selected for the landing page marker popup and the status is enabled.
+    /**
+     * The short open / closed status, if it's selected for 
+     * the landing page marker popup and the status is enabled.
+     */
     if ( in_array( 'landing_page_marker_popup', $hours, true ) && $settings->get( 'ux', 'show_hour_status' ) ) {
         $cpt_info_window_template .= "\t" . '<% if ( typeof hours_status !== "undefined" && hours_status ) { %>' . "\r\n";
 
