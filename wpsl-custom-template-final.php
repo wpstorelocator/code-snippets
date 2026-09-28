@@ -1,8 +1,8 @@
 <?php
 /**
- * Example of a single WPSL store template for the Twenty Fifteen theme.
+ * Example of a single store template for a classic theme, including all the code examples.
  *
- * @package Twenty_Fifteen
+ * Change the HTML to match the single.php of your theme.
  */
 
 get_header(); ?>
