@@ -32,7 +32,8 @@ $rows = [
     ],
 ];
 
-// Not $contact_details: the v3 templates use that name for the contact details setting.
+// Not $contact_details: the v3 templates use 
+// that name for the contact details setting.
 $contact_block = '<p class="wpsl-contact-details">' . "\r\n";
 
 foreach ( $rows as $row ) {
