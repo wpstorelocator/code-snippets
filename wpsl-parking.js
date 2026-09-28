@@ -1,3 +1,3 @@
-<% if ( parking ) { %>
+<% if ( typeof parking !== "undefined" && parking ) { %>
 <p class="wpsl-parking"><%= parking %></p>
 <% } %>
