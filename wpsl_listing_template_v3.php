@@ -59,12 +59,14 @@ function custom_listing_template() {
     $listing_template .= "\t\t" . '<p><%= my_textinput %></p>' . "\r\n";
     $listing_template .= "\t\t" . '<% } %>' . "\r\n";
 
-    // The phone, fax and email, if "Below the address in the search results" is selected for the contact details.
+    // The phone, fax and email, if "Below the address in the search results"
+    // is selected for the contact details.
     if ( in_array( 'search_results', $contact_details, true ) ) {
         $listing_template .= $sections->contact_details();
     }
 
-    // The opening hours, if "Below the address in the search results" is selected for the opening hours.
+    // The opening hours, if "Below the address in the search results" 
+    // is selected for the opening hours.
     if ( in_array( 'search_results', $hours, true ) ) {
         $listing_template .= "\t\t" . '<% if ( typeof hours !== "undefined" && hours ) { %>' . "\r\n";
 
@@ -84,21 +86,24 @@ function custom_listing_template() {
     $listing_template .= "\t\t" . '<p class="' . esc_attr( $status_class ) . '"><%= location_status %></p>' . "\r\n";
     $listing_template .= "\t\t" . '<% } %>' . "\r\n";
 
-    // The post content, if "Below the address in the search results" is selected for the post content.
+    // The post content, if "Below the address in the search results" 
+    // is selected for the post content.
     if ( in_array( 'search_results', $description, true ) ) {
         $listing_template .= "\t\t" . '<% if ( typeof description !== "undefined" && description ) { %>' . "\r\n";
         $listing_template .= "\t\t" . '<p><%= description %></p>' . "\r\n";
         $listing_template .= "\t\t" . '<% } %>' . "\r\n";
     }
 
-    // The "More info" link and content, if any of the "Location(s) of ..." settings includes the "more info" section.
+    // The "More info" link and content, if any of the 
+    // "Location(s) of ..." settings includes the "more info" section.
     if ( in_array( 'more_info', $contact_details, true ) || in_array( 'more_info', $hours, true ) || in_array( 'more_info', $description, true ) ) {
         $listing_template .= "\t\t" . $sections->more_info_template() . "\r\n";
     }
 
     $listing_template .= "\t" . '</div>' . "\r\n";
 
-    // The directions link moves to its own section when the links are styled as buttons, or the "More details" link is enabled.
+    // The directions link moves to its own section when the 
+    // links are styled as buttons, or the "More details" link is enabled.
     $cta_details     = ! empty( $cta['details'] );
     $has_cta_section = ! empty( $cta['enabled'] ) || $cta_details;
 
