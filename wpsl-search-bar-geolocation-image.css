@@ -1,0 +1,10 @@
+#wpsl-search-wrap .wpsl-icon-direction:before {
+    content: none;
+}
+
+#wpsl-search-wrap .wpsl-icon-direction {
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    background: url( 'images/my-location.svg' ) no-repeat center / contain;
+}
