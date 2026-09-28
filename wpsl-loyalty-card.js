@@ -1,3 +1,3 @@
-<% if ( loyalty_card ) { %>
+<% if ( typeof loyalty_card !== "undefined" && loyalty_card ) { %>
 <p class="wpsl-loyalty-card"><%= loyalty_card %></p>
 <% } %>
