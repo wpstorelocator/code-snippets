@@ -1,0 +1,25 @@
+#wpsl-search-wrap .wpsl-icon-direction {
+    flex: 0 0 auto;
+    align-self: center;
+    margin: 0;
+    margin-inline-start: 8px;
+    padding: 4px;
+    border: 0;
+    background: none;
+    color: #737373;
+    cursor: pointer;
+}
+
+#wpsl-search-wrap .wpsl-icon-direction:before {
+    font-size: 18px;
+}
+
+#wpsl-search-wrap .wpsl-icon-direction:hover,
+#wpsl-search-wrap .wpsl-icon-direction:focus-visible {
+    color: #000;
+}
+
+/* Name search has no location to fill in, so hide the button. */
+#wpsl-wrap.wpsl-names #wpsl-search-wrap .wpsl-input button.wpsl-icon-direction {
+    display: none !important;
+}
