@@ -54,7 +54,8 @@ function custom_info_window_template() {
         $info_window_template .= $sections->contact_details();
     }
 
-    // The short open / closed status, if "In the marker popup" is selected for the opening hours and the status is enabled.
+    // The short open / closed status, if "In the marker popup" is 
+    // selected for the opening hours and the status is enabled.
     if ( in_array( 'marker_popup', $hours, true ) && $settings->get( 'ux', 'show_hour_status' ) ) {
         $info_window_template .= "\t" . '<% if ( typeof hours_status !== "undefined" && hours_status && ( typeof location_status === "undefined" || !location_status ) ) { %>' . "\r\n";
 
@@ -81,7 +82,8 @@ function custom_info_window_template() {
     $info_window_template .= "\t" . '<p class="' . esc_attr( $status_class ) . '"><%= location_status %></p>' . "\r\n";
     $info_window_template .= "\t" . '<% } %>' . "\r\n";
 
-    // The directions, street view and zoom links, plus the "More details" link when it's enabled.
+    // The directions, street view and zoom links, 
+    // plus the "More details" link when it's enabled.
     $info_window_template .= "\t" . '<%= createInfoWindowActions( id, url, typeof permalink !== "undefined" ? permalink : "" ) %>' . "\r\n";
     $info_window_template .= '</div>';
 
