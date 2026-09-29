@@ -1,0 +1,17 @@
+/* Take the thumbnail out of the text flow, so a tall thumbnail doesn't push the other details down. */
+#wpsl-wrap #wpsl-result-list li {
+    position: relative;
+}
+
+#wpsl-wrap #wpsl-stores .wpsl-store-thumb {
+    float: none;
+    position: absolute;
+    top: 10px;
+    inset-inline-end: 10px;
+    margin: 0;
+}
+
+/* Keep the text clear of the thumbnail. Use the thumbnail width + 10px. */
+#wpsl-wrap #wpsl-result-list .wpsl-store-location {
+    padding-inline-end: 110px;
+}
