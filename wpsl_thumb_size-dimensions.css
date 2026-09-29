@@ -1,0 +1,6 @@
+/* Set the thumbnail width and height. Use the same values as in the wpsl_thumb_size filter. */
+#wpsl-wrap #wpsl-stores .wpsl-store-thumb {
+    width: 120px !important;
+    height: 60px !important;
+    object-fit: cover;
+}
