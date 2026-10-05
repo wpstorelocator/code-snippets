@@ -1,0 +1,5 @@
+# Before
+Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+
+# After
+Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(self)"
