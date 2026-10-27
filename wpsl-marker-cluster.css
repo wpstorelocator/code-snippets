@@ -1,6 +1,17 @@
-#wpsl-map .marker-cluster-small      { background-color: rgba(43, 131, 186, .4); }
-#wpsl-map .marker-cluster-small div  { background-color: rgba(43, 131, 186, .8); }
-#wpsl-map .marker-cluster-medium     { background-color: rgba(253, 174, 97, .4); }
-#wpsl-map .marker-cluster-medium div { background-color: rgba(253, 174, 97, .8); }
-#wpsl-map .marker-cluster-large      { background-color: rgba(215, 25, 28, .4); }
-#wpsl-map .marker-cluster-large div  { background-color: rgba(215, 25, 28, .8); }
+.wpsl-canvas-osm .marker-cluster-small,  
+.wpsl-canvas-stadia .marker-cluster-small { background-color: rgba(43, 131, 186, .4); }
+
+.wpsl-canvas-osm .marker-cluster-small div,  
+.wpsl-canvas-stadia .marker-cluster-small div { background-color: rgba(43, 131, 186, .8); }
+
+.wpsl-canvas-osm .marker-cluster-medium, 
+.wpsl-canvas-stadia .marker-cluster-medium { background-color: rgba(253, 174, 97, .4); }
+
+.wpsl-canvas-osm .marker-cluster-medium div, 
+.wpsl-canvas-stadia .marker-cluster-medium div { background-color: rgba(253, 174, 97, .8); }
+
+.wpsl-canvas-osm .marker-cluster-large, 
+.wpsl-canvas-stadia .marker-cluster-large { background-color: rgba(215, 25, 28, .4); }
+
+.wpsl-canvas-osm .marker-cluster-large div,  
+.wpsl-canvas-stadia .marker-cluster-large div { background-color: rgba(215, 25, 28, .8); }
